@@ -17,62 +17,6 @@
     <section class="arriba">
         <img src="/assets/devchallenges.svg" alt="" class="logo">
 
-
-        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <?php
-        session_start();
-        if (isset($_SESSION['user_data'])) {
-            $Usuario = $_SESSION['user_data'];
-            echo '<div class="user-profile">';
-            echo '<img src="/imag/' . $Usuario['Photo'] . '" alt="Imagen usuario" class="profile-picture">';
-            echo '<p class="user-name">' . $Usuario['Name'] . '</p>';
-            echo '</div>';
-        } else {
-            header("location:../views/login.php");
-            exit();
-        }
-        
-        ?>
-        <p><span class="material-symbols-outlined">
-expand_more
-</span></p>
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        <?php
-                        
-
-                        if (isset($_SESSION['user_data'])) {
-                            $Usuario = $_SESSION['user_data'];
-                            echo '<div class="user-profile">';
-                            echo '<img src="/imag/' . $Usuario['Photo'] . '" alt="Imagen usuario" class="profile-picture">';
-                            echo '<p class="user-name">' . $Usuario['Name'] . '</p>';
-                            echo '</div>';
-                        } else {
-                            header("location:../views/login.php");
-                        }
-                        ?>
-                    </h1>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="../resources/delete.php">
-                        <input type="hidden" name="id" value="<?= $Usuario['Usuario'] ?>">
-                        <button type="submit" class="btn btn-secondary">Eliminar Perfil</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="../resources/cierre.php" class="btn btn-primary">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
     </section>
 
     
