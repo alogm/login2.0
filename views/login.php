@@ -11,12 +11,10 @@
 </head>
 
 <body>
-    
+
     <section>
         <img src="/assets/devchallenges.svg" alt="" class="img">
         <h1>Login</h1>
-
-
         <form action="/resources/validacion.php" method="post" require>
 
             <div class="input-container">
@@ -33,11 +31,11 @@
                 </span>
             </div>
 
-            <button type="submit" class="submit" >Login</button>
+            <button type="submit" class="submit">Login</button>
         </form>
         <div class="center">
             <p>or continue with these social profile</p>
-          
+
             <a href=""><img src="/assets/Google.svg" alt=""></a>
             <a href=""><img src="/assets/Facebook.svg" alt=""></a>
             <a href=""><img src="/assets/Twitter.svg" alt=""></a>
