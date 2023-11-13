@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             header("location:/manejo_errores/error_update.php");
         }
     }else {
-        // Redirecciona a perfil.php incluso si no se carga una nueva foto
         $mysqli->query("UPDATE login_db SET email='$Email', " . ($hashedPassword ? "contrasena='$hashedPassword', " : "") . "name='$Name', Bio='$Bio', phone='$Phone' WHERE Usuario ='$id'");
         header("location:/views/perfil.php");
     }
